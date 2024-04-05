@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac</title>
+    <link rel="icon" href='tic tac toe.jpg'>
+</head>
+<link rel="stylesheet" href="tictac.css">
+<script src="tictac.js"></script>
+<body>
+    <h3>TIC-TAC</h3>
+    <div class = "game">
+        <div class="container">
+            <div class="box" id ="first" onclick="draw(this.id)"></div>
+            <div class = "box" id="second" onclick="draw(this.id)"></div>
+            <div class = "box" id="third" onclick="draw(this.id)"></div>
+        </div>
+        <div class="container">
+            <div class = "box" id="fourth" onclick="draw(this.id)"></div>
+            <div class = "box" id="fifth" onclick="draw(this.id)"></div>
+            <div class="box" id = "sixth" onclick="draw(this.id)"></div>
+        </div>
+        <div class="container">
+            <div class = "box" id="seventh" onclick="draw(this.id)"></div>
+            <div class = "box" id="eight" onclick="draw(this.id)"></div>
+            <div class="box" id = "ninth" onclick="draw(this.id)"></div>
+        </div>
+    </div>
+    <div class = "play">
+        <span class = "players" id = "P1" onclick="Edit1(this.id)">PLAYER(1)</span>
+        <span class = "players">TIE</span>
+        <span class = "players" id = "P2" onclick="Edit2(this.id)">PLAYER(2)</span><br>
+    </div>
+    <div class = "play2">
+        <span class = "score" id = "Player1_score">0</span>
+        <span class = "score" id = "Tied_score">0</span>
+        <span class = "score" id = "Player2_score">0</span>
+    </div>
+</body>
+</html>
