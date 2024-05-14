@@ -1,73 +1,92 @@
-    .container {
-        display: flex;
-        margin-left: 10px;
-    }
-    .box {
-        border: solid white 5px;
-        height: 150px;
-        width:150px;
-        border-top-color:black;
-    }
-  #first,#fourth,#seventh {
-   border-right-color: black;
-   border-left-color: black;
-   cursor: pointer;
+* {
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  margin-left: 10px;
+}
+.box {
+  border: solid white 5px;
+  height: 150px;
+  width: 150px;
+  border-top-color: black;
+}
+#first,#fourth,#seventh {
+  border-right-color: black;
+  border-left-color: black;
+  cursor: pointer;
+}
+#third,#sixth,#ninth {
+  border-right-color: black;
+  border-left-color: black;
+  cursor: pointer;
+}
+#seventh,#eight,#ninth {
+  border-bottom-color: black;
+  cursor: pointer;
+}
+#second,#fifth {
+  cursor: pointer;
+}
+body {
+  background-color: black;
+  color: white;
+}
+.game {
+  width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+.players {
+  font-size: 20px;
+  margin-left: 70px;
+}
+.score {
+  margin-left: 132px;
+}
+.play,.play2 {
+  margin-left: 1px;
+  margin-right: auto;
+  margin-top: 37px;
+}
+.play2 {
+  margin-top: 15px;
+  margin-left: -30px;
+  font-size: 25px;
+  margin-right: auto;
+}
+h3 {
+  margin-left: 153px;
+  margin-right: auto;
+  font-size: 40px;
+  color: red;
+}
+@keyframes Mahi {
+  0% {
+    opacity: 1;
   }
-  #third,#sixth,#ninth {
-    border-right-color: black;
-    border-left-color: black;
-    cursor: pointer;
+  15% {
+    opacity: 0;
   }
-  #seventh,#eight,#ninth {
-    border-bottom-color:black;
-    cursor: pointer;
+  30% {
+    opacity: 1;
   }
-  #second,#fifth {
-    cursor:pointer;
+  45% {
+    opacity: 0;
   }
-  body {
-    background-color: black;
-    color: white;
+  60% {
+    opacity: 1;
   }
-  .game {
-    width: 550px;
-    margin-left: 450px;
-    margin-top: 40px;
-    margin-bottom: 50px;
+  75% {
+    opacity: 0;
   }
-  .players {
-    /* border: solid red 1px; */
-    font-size: 20px;
-    margin-left: 100px;
-  }
-  .score {
-    margin-left: 150px;
-  }
-  .play,.play2 {
-    margin-left: 420px;
-  }
-  .play2 {
-    margin-top: 15px;
-    margin-left: 415px;
-    font-size: 25px;
-  }
-  h3 {
-    margin-left: 620px;
-    font-size: 40px;
-    color: red;
-  }
-  @keyframes Mahi{
-        0%   {opacity: 1;}
-       15%  {opacity: 0;}
-       30%  {opacity: 1;}
-       45% {opacity: 0;}
-       60% {opacity: 1;}
-       75% {opacity: 0;}
-    }
+}
 .hello {
-        animation-name: Mahi;
-        animation-duration: 1s;
+  animation-name: Mahi;
+  animation-duration: 1s;
 }
 #P1,#P2 {
-      cursor: pointer;
+  cursor: pointer;
 }
