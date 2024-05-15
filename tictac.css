@@ -90,3 +90,6 @@ h3 {
 #P1,#P2 {
   cursor: pointer;
 }
+#tie,#P2,#Tied_score,#Player2_score {
+  color : grey;
+}
