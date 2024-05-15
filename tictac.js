@@ -110,6 +110,52 @@ function conveter(x) {
   }
   return k;
 }
+function zero() {
+  i = 1;
+  let pos = {
+    "0": "P1",
+    "1": "tie",
+    "2":"Player1_score",
+    "3":"Tied_score",
+    "4":"P2",
+    "5":"Player2_score"
+  }
+  for(let k = 0; k < 4; k++) {
+    let tiedElement = document.getElementById(pos[k]);
+    if (tiedElement) {
+      tiedElement.style.color = "grey";
+    }
+  }
+  for(let k2 = 4; k2 < 6; k2++) {
+    let tiedElement = document.getElementById(pos[k2]);
+    if (tiedElement) {
+      tiedElement.style.color = "white";
+    }
+  }
+}
+function cross() {
+  i = 0;
+  let pos = {
+    "0": "P2",
+    "1": "tie",
+    "2":"Player2_score",
+    "3":"Tied_score",
+    "4":"P1",
+    "5":"Player1_score"
+  }
+  for(let k = 0; k < 4; k++) {
+    let tiedElement = document.getElementById(pos[k]);
+    if (tiedElement) {
+      tiedElement.style.color = "grey";
+    }
+  }
+  for(let k2 = 4; k2 < 6; k2++) {
+    let tiedElement = document.getElementById(pos[k2]);
+    if (tiedElement) {
+      tiedElement.style.color = "white";
+    }
+  }
+}
 let restart_count = 0;
 function restart() {
   restart_count++;
@@ -120,49 +166,9 @@ function restart() {
   }
   count = 0;
   if(restart_count % 2 != 0) {
-    i = 1;
-    let pos = {
-      "0": "P1",
-      "1": "tie",
-      "2":"Player1_score",
-      "3":"Tied_score",
-      "4":"P2",
-      "5":"Player2_score"
-    }
-    for(let k = 0; k < 4; k++) {
-      let tiedElement = document.getElementById(pos[k]);
-      if (tiedElement) {
-        tiedElement.style.color = "grey";
-      }
-    }
-    for(let k2 = 4; k2 < 6; k2++) {
-      let tiedElement = document.getElementById(pos[k2]);
-      if (tiedElement) {
-        tiedElement.style.color = "white";
-      }
-    }
+    zero();
   } else {
-    i = 0;
-    let pos = {
-      "0": "P2",
-      "1": "tie",
-      "2":"Player2_score",
-      "3":"Tied_score",
-      "4":"P1",
-      "5":"Player1_score"
-    }
-    for(let k = 0; k < 4; k++) {
-      let tiedElement = document.getElementById(pos[k]);
-      if (tiedElement) {
-        tiedElement.style.color = "grey";
-      }
-    }
-    for(let k2 = 4; k2 < 6; k2++) {
-      let tiedElement = document.getElementById(pos[k2]);
-      if (tiedElement) {
-        tiedElement.style.color = "white";
-      }
-    }
+    cross();
   }
   numbers["first"] = -1;
   numbers["second"] = -1;
@@ -225,12 +231,14 @@ function draw(position) {
       h1 = `<audio src="Ad.mp3" autoplay></audio>`;
       html = `<img src="${"o.png"}" alt="404">`;
       i = 1;
+      zero();
       numbers[position] = 0;
       count++;
     } else {
       h1 = `<audio src="Ad.mp3" autoplay></audio>`;
       html = `<img src="${"Cross.png"}" alt="404">`;
       i = 0;
+      cross();
       numbers[position] = 1;
       count++;
     }
